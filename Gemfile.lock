@@ -1,0 +1,28 @@
+PATH
+  remote: .
+  specs:
+    billomat_csv_exporter (1.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
+    mini_portile2 (2.1.0)
+    nokogiri (1.6.8.1)
+      mini_portile2 (~> 2.1.0)
+    public_suffix (2.0.4)
+    rake (10.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  addressable
+  billomat_csv_exporter!
+  bundler (~> 1.7)
+  nokogiri
+  rake (~> 10.0)
+
+BUNDLED WITH
+   1.13.6

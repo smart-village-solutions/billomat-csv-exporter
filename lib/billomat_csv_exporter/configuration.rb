@@ -6,6 +6,7 @@ module BillomatCsvExporter
               x_billomat_api_key: "",
               accept_language: "de-de",
               host: "yourname.billomat.net",
+              port: 443,
               csv: {
                 encoding: "UTF8",
                 col_sep: ";"
@@ -22,18 +23,18 @@ module BillomatCsvExporter
     # Configure through yaml file
     def self.configure_with_path
       if defined?(::Rails).nil?
-        path_to_yaml_file = "../config/billomat_exporter.yml"
+        path_to_yaml_file = "config/billomat_exporter.yml"
       else
         path_to_yaml_file = "#{::Rails.root}/config/billomat_exporter.yml"
       end
       begin
         config = YAML::load(IO.read(path_to_yaml_file))
       rescue Errno::ENOENT
-        puts "YAML configuration file couldn't be found. Using defaults."
-        return
+       puts "YAML configuration file couldn't be found. Using defaults."
+       return
       rescue Psych::SyntaxError
-        puts "YAML configuration file contains invalid syntax. Using defaults."
-        return
+       puts "YAML configuration file contains invalid syntax. Using defaults."
+       return
       end
 
       configure(config)
