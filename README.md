@@ -7,7 +7,7 @@ export all Invoices including all items to an csv file
 
 # Configure Settings
 
-copy config/billomat_exporter.yml.tmpl => billomat_exporter.yml
+copy /config/billomat_exporter.yml.tmpl => /config/billomat_exporter.yml
 
 # Start exporter
 
