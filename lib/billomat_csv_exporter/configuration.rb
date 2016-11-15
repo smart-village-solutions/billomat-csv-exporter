@@ -1,14 +1,14 @@
 module BillomatCsvExporter
   class Configuration
     @config = {
-              "X-AppId" => "",
-              "X-AppSecret" => "",
-              "X-BillomatApiKey" => true,
-              "Accept-Language" => "de-de",
-              "Host" => "yurname.billomat.net",
-              "csv" => {
-                "encoding" => "UTF8",
-                "col_sep" => ";"
+              x_app_id: "",
+              x_app_secret: "",
+              x_billomat_api_key: "",
+              accept_language: "de-de",
+              host: "yourname.billomat.net",
+              csv: {
+                encoding: "UTF8",
+                col_sep: ";"
               }
             }
 
