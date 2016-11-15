@@ -1,12 +1,14 @@
 # billomat-csv-exporter
 export all Invoices including all items to an csv file
 
-# usage
-
-Start rails console by typing
+# Start rails console by typing
 
 `rake console`
 
-Start exporter
+# Configure Settings
+
+copy config/billomat_exporter.yml.tmpl => billomat_exporter.yml
+
+# Start exporter
 
 `BillomatCsvExporter.new`
