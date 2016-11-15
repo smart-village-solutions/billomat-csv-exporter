@@ -34,8 +34,8 @@ module BillomatCsvExporter
         # puts invoice.at_xpath("id").text
         # puts invoice_items.inspect
 
-        data = []
         invoice_items.each do |invoice_item|
+          data = []
           FIELDS_TO_EXPORT.each do |field|
             data << parse_text(invoice.at_xpath(field).text)
           end
