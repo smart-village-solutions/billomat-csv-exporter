@@ -58,7 +58,7 @@ module BillomatCsvExporter
     end
 
     def parse_text(text)
-      text = text.gsub("\r\n", ", ")
+      text = text.gsub("\r\n", ", ").gsub("\"", "").gsub(";","").gsub('"',"")
       "\"#{text}\""
     end
 
